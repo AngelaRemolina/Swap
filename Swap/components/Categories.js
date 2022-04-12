@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Image } from 'react-native';
+import { View, Text, Image, ScrollView } from 'react-native';
 
 const items = [
     {
@@ -19,13 +19,45 @@ const items = [
         text: "Zapatos"
     },
     // TODO: añadir demás categorias en el futuro
-]
+];
+
+
 
 export default function Categories() {
-    return (
-        <View>
-            <Image source={items[0].image} />
 
-        </View>
+    var categories = [];
+
+    for (let i = 0; i < items.length; i++) {
+        categories.push(
+            <View key={i} style={{ marginRight: 30 }}>
+                < Image
+                    source={items[i].image}
+                    style={{
+                        width: 50,
+                        height: 40,
+                        alignItems: "center",
+                        resizeMode: "contain",
+                    }}
+                />
+                < Text
+                    style={{
+                        fontSize: 13,
+                        fontWeight: "900",
+                        alignItems: "center",
+                    }
+                    }
+                >
+                    {items[i].text}
+                </Text >
+            </View >)
+
+    }
+    return (
+        <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+
+            {categories}
+
+        </ ScrollView >
+
     )
 }

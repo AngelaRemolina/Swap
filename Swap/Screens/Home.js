@@ -5,7 +5,6 @@ import SearchBar from "../components/SearchBar";
 import Categories from "../components/Categories";
 
 export default function Home() {
-    console.log("estoy en home");
     return (
         <SafeAreaView style={{ backgroundColor: "#eee", flex: 1 }}>
             <View style={{ backgroundColor: "white", padding: 15 }}>

@@ -5,7 +5,6 @@ import { View, Text, TouchableOpacity } from "react-native";
 
 
 export default function Home() {
-    console.log("estoy en headerTabs");
     const [activeTab, setActiveTab] = useState("Delivery");
     return (
         <View style={{ flexDirection: "row", alignSelf: "center" }}>
