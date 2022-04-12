@@ -18,7 +18,7 @@ const items = [
         image: require('../assets/images/sneakers.png'),
         text: "Zapatos"
     },
-    // TODO: añadir demás categorias en el futuro
+    // TODO: add more categories in the future
 ];
 
 
