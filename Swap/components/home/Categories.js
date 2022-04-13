@@ -3,19 +3,19 @@ import { View, Text, Image, ScrollView } from 'react-native';
 
 const items = [
     {
-        image: require('../assets/images/dress.png'),
+        image: require('../../assets/images/dress.png'),
         text: "Vestidos"
     },
     {
-        image: require('../assets/images/jeans.png'),
+        image: require('../../assets/images/jeans.png'),
         text: "Pantalones"
     },
     {
-        image: require('../assets/images/shirt.png'),
+        image: require('../../assets/images/shirt.png'),
         text: "Camisas"
     },
     {
-        image: require('../assets/images/sneakers.png'),
+        image: require('../../assets/images/sneakers.png'),
         text: "Zapatos"
     },
     // TODO: add more categories in the future

@@ -45,7 +45,7 @@ const ClothingImage = (props) => (
             }}
         />
         <TouchableOpacity style={{ position: "absolute", right: 20, top: 20 }}>
-            <MaterialCommunityIcons name='heart-outline' size={25} color="#fff"></MaterialCommunityIcons>
+            <MaterialCommunityIcons name='heart-outline' size={25} color="black"></MaterialCommunityIcons>
             {/* TODO: make the heart color when clicked "on/off" */}
         </TouchableOpacity>
     </>
