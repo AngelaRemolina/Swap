@@ -1,17 +1,19 @@
 import React from 'react';
 import { View, Text, Image } from 'react-native';
 
-const image = "https://http2.mlstatic.com/D_NQ_NP_893128-MCO46091066888_052021-W.jpg"
-const title = 'Camisa de Mickey'
-const description = 'grande'
+export default function About(props) {
+    const image = "https://http2.mlstatic.com/D_NQ_NP_893128-MCO46091066888_052021-W.jpg"
+    const title = 'Camisa de Mickey'
+    const description = 'Grande'
+    const color = 'Blanco'
+    const size = 14
 
-
-export default function About() {
     return (
         <View>
             <ClothingImage image={image} />
             <ClothingTitle title={title} />
             <ClothingDescription description={description} />
+            <ClothingDetails color={color} size={size} />
         </View>
     )
 }
@@ -40,4 +42,24 @@ const ClothingDescription = (props) => (
     }}>
         {props.description}
     </Text>
+);
+
+const ClothingDetails = (props) => (
+    <View style={{
+        color: "black",
+        marginTop: 10,
+        marginHorizontal: 15,
+        fontSize: 10,
+        fontWeight: "600",
+    }}>
+
+        <Text>
+            color: {props.color}
+        </Text>
+        <Text>
+            talla: {props.size}
+        </Text>
+
+    </View>
+
 );

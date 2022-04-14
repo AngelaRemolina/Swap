@@ -7,7 +7,7 @@ import ClothingItems, { clothes_list } from "../components/home/ClothingItems";
 // import { Divider } from "react-native-elements";
 import BottomTabs from "../components/home/BottomTabs";
 
-export default function Home() {
+export default function Home({ navigation }) {
     const [clothesData, setClothesData] = React.useState(clothes_list);
     const [activeTab, setActiveTab] = React.useState("Delivery");
 
@@ -25,7 +25,9 @@ export default function Home() {
             </View>
             <ScrollView showsVerticalScrollIndicator={false}>
                 <Categories />
-                <ClothingItems clothesData={clothesData} />
+                <ClothingItems
+                    clothesData={clothesData}
+                    navigation={navigation} />
             </ScrollView>
             {/* <Divider width={1} /> */}
             <BottomTabs />
