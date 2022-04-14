@@ -17,7 +17,7 @@ export default function About() {
 }
 
 const ClothingImage = (props) => (
-    <Image source={{ uri: props.image }} style={{ width: "100", height: 180 }} />
+    <Image source={{ uri: props.image }} style={{ width: "100%", height: 180 }} />
 );
 
 const ClothingTitle = (props) => (
