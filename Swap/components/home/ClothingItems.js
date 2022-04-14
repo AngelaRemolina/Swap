@@ -8,7 +8,10 @@ export const clothes_list = [
         img_url: "https://http2.mlstatic.com/D_NQ_NP_893128-MCO46091066888_052021-W.jpg",
         categories: ["Camisas"],
         price: 20000,
-        size: 12
+        size: 12,
+        color: "Blanco",
+        description: "Grande",
+        
         // TODO: poner demás detalles
     },
     {
@@ -16,7 +19,9 @@ export const clothes_list = [
         img_url: "https://falabella.scene7.com/is/image/FalabellaCO/3794189_1?wid=800&hei=800&qlt=70",
         categories: ["Jean"],
         price: 65000,
-        size: 13
+        size: 13,
+        color: "Blanco",
+        description: "Grande",
     }
 ]
 
@@ -24,17 +29,18 @@ export default function ClothingItems({ navigation, ...props }) {
     return (
         <>
             {props.clothesData.map((item, index) => (
-                <TouchableOpacity activeOpacity={1} style={{ marginBottom: 30 }}
+                <TouchableOpacity key={index} activeOpacity={1} style={{ marginBottom: 30 }}
                     onPress={() => navigation.navigate("ClothingDetail", {
                         name: item.name,
                         image: item.img_url,
                         categories: item.categories,
                         price: item.price,
-                        size: item.size
-
+                        size: item.size,
+                        color:item.color,
+                        description: item.description,
                     })
                     }>
-                    <View key={index} style={{ marginTop: 10, padding: 15, backgroundColor: "white" }}>
+                    <View style={{ marginTop: 10, padding: 15, backgroundColor: "white" }}>
                         <ClothingImage image={item.img_url} />
                         <ClothingInfo name={item.name} price={item.price} />
                     </View>
