@@ -1,4 +1,5 @@
-import firebase from "firebase";
+import firebase from "firebase"; //8.2.3
+// import firebase from "firebase/compat/app"; //for 9.6.10
 // import { initializeApp } from "firebase/app";
 
 const firebaseConfig = {
@@ -7,7 +8,7 @@ const firebaseConfig = {
   projectId: "swap-a43a7",
   storageBucket: "swap-a43a7.appspot.com",
   messagingSenderId: "109611668591",
-  appId: "1:109611668591:web:9e2c6e785ae2fddd73a99a"
+  appId: "1:109611668591:web:9e2c6e785ae2fddd73a99a",
 };
 
 !firebase.apps.length ? firebase.initializeApp(firebaseConfig) : firebase.app();

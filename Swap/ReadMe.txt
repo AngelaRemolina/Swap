@@ -14,4 +14,4 @@ MUY IMPORTANTE:
 npm install tslib 
 
 MUY IMPORTANTE:
-expo install firebase
+expo install firebase@8.2.3
