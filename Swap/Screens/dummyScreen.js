@@ -1,3 +1,5 @@
+// ESTE ARCHIVO SOLO ES UNA GUIA PARA LA CONEXIÓN CON FIREBASE, LUEGO PODRÁ SER ELIMINADO
+
 import { View, Text, TouchableOpacity } from "react-native";
 import React from "react";
 import firebase from "../firebase";
