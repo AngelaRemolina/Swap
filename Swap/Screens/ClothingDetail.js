@@ -1,13 +1,18 @@
-import React from 'react';
-import { View, Text } from 'react-native';
+import React from "react";
+import { View, Text } from "react-native";
 import About from "../components/clothingDetail/About";
+import StartChat from "../components/clothingDetail/StartChat";
 
-export default function ClothingDetail({ route }) {
-    return (
-        <View>
-            <About route={route} />
-            {/*<Divider width={1.8} style={{ marginVertical: 20 }} />*/}
-            {/*Ángela va a probar esta dependencia para ver si sirve después*/}
-        </View>
-    )
+export default function ClothingDetail({ route, navigation }) {
+  return (
+    <View>
+      <About route={route} />
+      <StartChat
+        navigation={navigation}
+        name={route.params.name}
+        image={route.params.image}
+        price={route.params.price}
+      />
+    </View>
+  );
 }
