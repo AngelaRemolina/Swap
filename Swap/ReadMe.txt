@@ -8,9 +8,11 @@ npm install react-native-gesture-handler@2.1.0
 npm install react-native-safe-area-context@3.3.2
 npm install react-native-reanimated@2.3.1
 npm install reanimated-bottom-sheet
-npm install firebase react-firebase-hooks
 npm install tslib
 expo install firebase@8.2.3
+
+opcional por ahora:
+npm install react-firebase-hooks
 
 En caso de que algunos paquetes estén en versiones incompatibles con expo:
 expo doctor --fix-dependencies
