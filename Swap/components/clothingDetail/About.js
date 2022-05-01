@@ -2,7 +2,6 @@ import React from "react";
 import { View, Text, Image } from "react-native";
 
 export default function About(props) {
-
   const { name, image, categories, price, size, color, description } =
     props.route.params;
   return (

@@ -6,10 +6,14 @@ import Home from './Screens/Home';
 import ClothingDetail from './Screens/ClothingDetail';
 import AppLoading from 'expo-app-loading';
 import { useFonts } from 'expo-font';
+import Chat from "./Screens/Chat";
 
 export default function RootNavigation() {
+  const Stack = createStackNavigator();
 
-    const Stack = createStackNavigator();
+  const screenOptions = {
+    headerShown: false,
+  };
 
     const screenOptions = {
         headerShown: false,
@@ -26,6 +30,7 @@ export default function RootNavigation() {
                 <Stack.Screen options={{ headerShown: false }} name="Login" component={LoginScreen} />
                 <Stack.Screen name='Home' component={Home} />
                 <Stack.Screen name='ClothingDetail' component={ClothingDetail} />
+                <Stack.Screen name="Chat" component={Chat} />
             </Stack.Navigator>
         </NavigationContainer>
     )
