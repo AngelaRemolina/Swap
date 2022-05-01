@@ -1,15 +1,23 @@
 import { View, Text, TouchableOpacity } from 'react-native'
 import React from 'react'
 import FontAwesome5 from "react-native-vector-icons/FontAwesome5";
+import { IconButton, Colors } from 'react-native-paper';
+
 
 export default function BottomTabs() {
+
     return (
         <View style={{ flexDirection: "row", margin: 10, marginHorizontal: 30, justifyContent: "space-between" }}>
             <Icon icon="home" text="Inicio" />
             <Icon icon="search" text="Buscar" />
             <Icon icon="shopping-bag" text="Comprar" />
             <Icon icon="receipt" text="Ordenes" />
-            <Icon icon="user" text="Perfil" />
+            <IconButton
+                icon="user"
+                text="Perfil"
+                onPress={() => console.log('Pressed_user')}
+            />
+            {/* <Icon icon="user" text="Perfil" /> */}
         </View>
     )
 }

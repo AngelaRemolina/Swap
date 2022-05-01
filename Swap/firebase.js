@@ -1,16 +1,29 @@
-import firebase from "firebase"; //8.2.3
-// import firebase from "firebase/compat/app"; //for 9.6.10
-// import { initializeApp } from "firebase/app";
+// Import the functions you need from the SDKs you need
+import * as firebase from "firebase";
+//import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyBnphmS9AhqhsXSBxsVvYxz3AMSfikpN7g",
-  authDomain: "swap-a43a7.firebaseapp.com",
-  projectId: "swap-a43a7",
-  storageBucket: "swap-a43a7.appspot.com",
-  messagingSenderId: "109611668591",
-  appId: "1:109611668591:web:9e2c6e785ae2fddd73a99a",
+  apiKey: "AIzaSyC_qTdXOirwdC6uOH-fY9j_NwG4N9bN3kE",
+  authDomain: "swap-b247e.firebaseapp.com",
+  projectId: "swap-b247e",
+  storageBucket: "swap-b247e.appspot.com",
+  messagingSenderId: "809490967210",
+  appId: "1:809490967210:web:5cbf6b51bc22873531fed3",
+  measurementId: "G-4PF7S7XRM5"
 };
 
-!firebase.apps.length ? firebase.initializeApp(firebaseConfig) : firebase.app();
+//!firebase.apps.length ? firebase.initializeApp(firebaseConfig) : firebase.app();
+let app;
+if (firebase.apps.length === 0) {
+  app = firebase.initializeApp(firebaseConfig);
+} else {
+  app = firebase.app()
+}
+const auth = firebase.auth()
 
-export default firebase;
+export { auth };
+//export default firebase;

@@ -6,10 +6,14 @@ npm install @react-navigation/native
 npm install @react-navigation/stack
 npm install react-native-gesture-handler@2.1.0
 npm install react-native-safe-area-context@3.3.2
+expo install expo-font
+expo install expo-app-loading
+npm install react-native-paper
 npm install react-native-reanimated@2.3.1
 npm install reanimated-bottom-sheet
 npm install tslib
 expo install firebase@8.2.3
+
 
 opcional por ahora:
 npm install react-firebase-hooks

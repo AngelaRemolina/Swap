@@ -6,7 +6,15 @@
 import * as React from "react";
 import { StyleSheet, Text, View, SafeAreaView } from "react-native";
 import RootNavigation from "./navigation";
+import AppLoading from 'expo-app-loading';
+import { useFonts } from 'expo-font';
 
 export default function App() {
+  let [fontsLoaded] = useFonts({
+    'Montserrat': require('./assets/fonts/Montserrat-Bold.ttf'),
+  });
+  if (!fontsLoaded) {
+    return <AppLoading />;
+  }
   return <RootNavigation />;
 }
