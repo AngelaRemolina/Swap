@@ -9,11 +9,7 @@ import { useFonts } from 'expo-font';
 import Chat from "./Screens/Chat";
 
 export default function RootNavigation() {
-  const Stack = createStackNavigator();
-
-  const screenOptions = {
-    headerShown: false,
-  };
+    const Stack = createStackNavigator();
 
     const screenOptions = {
         headerShown: false,
