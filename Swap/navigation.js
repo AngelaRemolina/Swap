@@ -7,6 +7,7 @@ import ClothingDetail from './Screens/ClothingDetail';
 import AppLoading from 'expo-app-loading';
 import { useFonts } from 'expo-font';
 import Chat from "./Screens/Chat";
+import Profile from "./Screens/Profile";
 
 export default function RootNavigation() {
     const Stack = createStackNavigator();
@@ -27,6 +28,7 @@ export default function RootNavigation() {
                 <Stack.Screen name='Home' component={Home} />
                 <Stack.Screen name='ClothingDetail' component={ClothingDetail} />
                 <Stack.Screen name="Chat" component={Chat} />
+                <Stack.Screen name="Profile" component={Profile} />
             </Stack.Navigator>
         </NavigationContainer>
     )
