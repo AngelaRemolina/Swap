@@ -2,6 +2,10 @@ import React from "react";
 import { View, Text, Image } from "react-native";
 
 export default function About(props) {
+  var formatter = new Intl.NumberFormat('es-ES', {
+    style: 'currency',
+    currency: 'COP',
+  });
   const { name, image, categories, price, size, color, description } =
     props.route.params;
   return (
@@ -12,7 +16,7 @@ export default function About(props) {
       <ClothingDetails
         color={color}
         size={size}
-        price={price}
+        price={formatter.format(price)}
         categories={categories}
       />
     </View>

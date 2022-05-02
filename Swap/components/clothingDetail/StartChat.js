@@ -24,6 +24,7 @@ export default function StartChat({ navigation, ...props }) {
             navigation.navigate("Chat", {
               name: props.name,
               image: props.image,
+              seller: props.seller,
               price: props.price,
             })
           }

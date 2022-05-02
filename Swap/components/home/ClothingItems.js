@@ -11,8 +11,8 @@ export const clothes_list = [
     size: 12,
     color: "Blanco",
     description: "Grande",
-
-    // TODO: poner demás detalles
+    seller: "Juan Pérez",
+    lastMessage: "Me gusta, ¿cuánto es lo mínimo?"
   },
   {
     name: "Jean de Gef",
@@ -22,10 +22,16 @@ export const clothes_list = [
     size: 13,
     color: "Blanco",
     description: "Grande",
+    seller: "Angela Remolina",
+    lastMessage: "Se lo puedo pagar por Nequi?"
   }
 ]
 
 export default function ClothingItems({ navigation, ...props }) {
+  var formatter = new Intl.NumberFormat('es-ES', {
+    style: 'currency',
+    currency: 'COP',
+  });
   return (
     <>
       {props.clothesData.map((item, index) => (
@@ -42,7 +48,7 @@ export default function ClothingItems({ navigation, ...props }) {
           }>
           <View style={{ marginTop: 10, padding: 15, backgroundColor: "white" }}>
             <ClothingImage image={item.img_url} />
-            <ClothingInfo name={item.name} price={item.price} />
+            <ClothingInfo name={item.name} price={formatter.format(item.price)} />
           </View>
         </ TouchableOpacity >
       ))

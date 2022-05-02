@@ -23,7 +23,7 @@ export default function BottomTabs({ navigation }) {
                     icon="forum"
                     size={30}
                     // text="Chat"
-                    onPress={() => navigation.navigate("Chat")}
+                    onPress={() => navigation.navigate("ChatsList")}
                 />
                 <Text style={{ bottom: 10 }}>Chats</Text>
             </View>
