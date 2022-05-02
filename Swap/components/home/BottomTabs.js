@@ -13,13 +13,19 @@ export default function BottomTabs({ navigation }) {
                 icon="home"
                 size={30}
                 // text="Inicio"
-                onPress={() => navigation.navigate("Profile")}
+                onPress={() => navigation.navigate("Home")}
             />
             <IconButton
                 icon="forum"
                 size={30}
                 // text="Chat"
-                onPress={() => navigation.navigate("Profile")}
+                onPress={() => navigation.navigate("Chat")}
+            />
+            <IconButton
+                icon="heart"
+                size={30}
+                // text="perfil"
+                onPress={() => navigation.navigate("Favoritos")}
             />
             <IconButton
                 icon="account"
