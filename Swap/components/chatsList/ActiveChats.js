@@ -10,7 +10,8 @@ export default function ActiveChats({ navigation, ...props }) {
           onPress={() => navigation.navigate("Chat", {
             name: item.name,
             image: item.img_url,
-            seller: item.seller
+            seller: item.seller,
+            price: item.price,
           })
           }>
           <View style={{flexDirection: "row", marginTop: 10, padding: 40, backgroundColor: "white" }}>
