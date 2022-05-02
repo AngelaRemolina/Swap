@@ -1,5 +1,6 @@
 import React, { useState } from "react"; //7.4K (gzipped: 3K)
-import { View, Text, SafeAreaView, ScrollView } from "react-native";
+import { View, Text, ScrollView } from "react-native";
+import { SafeAreaView } from 'react-native-safe-area-context';
 import HeaderTabs from "../components/home/HeaderTabs";
 import SearchBar from "../components/home/SearchBar";
 import Categories from "../components/home/Categories";
