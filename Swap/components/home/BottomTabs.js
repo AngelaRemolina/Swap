@@ -27,8 +27,7 @@ export default function BottomTabs({ navigation }) {
                 />
                 <Text style={{ bottom: 10 }}>Chats</Text>
             </View>
-
-            <View style={styles.favorites}>
+            {/* <View style={styles.favorites}>
                 <IconButton
                     icon="heart"
                     size={30}
@@ -36,7 +35,7 @@ export default function BottomTabs({ navigation }) {
                     onPress={() => navigation.navigate("Favoritos")}
                 />
                 <Text style={{ bottom: 10 }}>Favoritos</Text>
-            </View>
+            </View> */}
             <View style={styles.profile}>
                 <IconButton
                     icon="account"
