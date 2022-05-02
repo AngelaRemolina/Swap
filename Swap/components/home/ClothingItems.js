@@ -28,6 +28,10 @@ export const clothes_list = [
 ]
 
 export default function ClothingItems({ navigation, ...props }) {
+  var formatter = new Intl.NumberFormat('es-ES', {
+    style: 'currency',
+    currency: 'COP',
+  });
   return (
     <>
       {props.clothesData.map((item, index) => (
@@ -44,7 +48,7 @@ export default function ClothingItems({ navigation, ...props }) {
           }>
           <View style={{ marginTop: 10, padding: 15, backgroundColor: "white" }}>
             <ClothingImage image={item.img_url} />
-            <ClothingInfo name={item.name} price={item.price} />
+            <ClothingInfo name={item.name} price={formatter.format(item.price)} />
           </View>
         </ TouchableOpacity >
       ))

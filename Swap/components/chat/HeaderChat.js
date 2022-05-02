@@ -3,10 +3,15 @@ import { View, Text, TouchableOpacity, SafeAreaView, Image } from "react-native"
 
 
 export default function HeaderChat(props) {
+  var formatter = new Intl.NumberFormat('es-ES', {
+    style: 'currency',
+    currency: 'COP',
+  });
     return (
-        <View style={{ flexDirection:"row" ,alignSelf: "center" }}>
+        <View style={{ alignSelf: "center", flexDirection:"row"}}>
             <ChatImage image={props.image}/>
-            <ChatInfo name={props.name} seller={props.seller} price={props.price} />
+            <ChatInfo name={props.name} seller={props.seller}/>
+            <Text style={{ alignSelf: "center", marginLeft: "10%" }}>{formatter.format(props.price)}</Text>
         </View>
     )
 }
@@ -33,6 +38,5 @@ const ChatImage = (props) => (
       }}>
       <Text id="seller" style={{ color: "black", fontSize: 15, fontWeight: "bold" }}>{props.seller}</Text>
       <Text id="name" style={{ fontSize: 13, color: "gray" }}>{props.name}</Text>
-      <Text id="price" style={{ fontSize: 13, color: "black" }}>{props.price}</Text>
     </View>
   );
