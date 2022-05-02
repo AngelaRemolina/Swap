@@ -4,6 +4,7 @@ import React from "react";
 import HeaderChat from "../components/chat/HeaderChat";
 import Messages from "../components/chat/Messages";
 import TextInputBox from "../components/chat/TextInputBox";
+import {messages_list} from "../components/chat/Messages";
 
 export default function Chat({ route }) {
   return (
@@ -25,7 +26,7 @@ export default function Chat({ route }) {
           }) */}
       </View>
       <ScrollView showsVerticalScrollIndicator={false}>
-        <Messages />
+        <Messages chatData={messages_list}/>
       </ScrollView>
       <View style={{ backgroundColor: "white", padding: 15 }}>
         <TextInputBox />

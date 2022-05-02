@@ -6,6 +6,7 @@ import 'intl/locale-data/jsonp/es';
 
 export const clothes_list = [
   {
+    id: 1,
     name: "Camisa Mickey Mouse",
     img_url: "https://http2.mlstatic.com/D_NQ_NP_893128-MCO46091066888_052021-W.jpg",
     categories: ["Camisas"],
@@ -17,6 +18,7 @@ export const clothes_list = [
     lastMessage: "Me gusta, ¿cuánto es lo mínimo?"
   },
   {
+    id: 2,
     name: "Jean de Gef",
     img_url: "https://falabella.scene7.com/is/image/FalabellaCO/3794189_1?wid=800&hei=800&qlt=70",
     categories: ["Jean"],
