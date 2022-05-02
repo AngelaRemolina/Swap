@@ -11,8 +11,8 @@ export const clothes_list = [
     size: 12,
     color: "Blanco",
     description: "Grande",
-
-    // TODO: poner demás detalles
+    seller: "Juan Pérez",
+    lastMessage: "Me gusta, ¿cuánto es lo mínimo?"
   },
   {
     name: "Jean de Gef",
@@ -22,6 +22,8 @@ export const clothes_list = [
     size: 13,
     color: "Blanco",
     description: "Grande",
+    seller: "Angela Remolina",
+    lastMessage: "Se lo puedo pagar por Nequi?"
   }
 ]
 
