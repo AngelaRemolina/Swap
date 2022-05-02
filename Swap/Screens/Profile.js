@@ -1,10 +1,10 @@
-import { StyleSheet, Text, TouchableOpacity, View, Image } from 'react-native'
+import { StyleSheet, Text, TouchableOpacity, View, ScrollView } from 'react-native'
 import { useNavigation } from '@react-navigation/core'
 import React from "react";
-import FontAwesome5 from "react-native-vector-icons/FontAwesome5";
 import { IconButton, Colors, Button } from 'react-native-paper';
 import { auth } from '../firebase'
 import { SafeAreaView } from 'react-native-safe-area-context';
+import BottomTabs from "../components/home/BottomTabs";
 import { useFonts } from 'expo-font';
 
 export default function Profile() {
@@ -19,84 +19,76 @@ export default function Profile() {
   }
 
   return (
-    <SafeAreaView>
+    <SafeAreaView style={{ backgroundColor: "#eee", flex: 1 }}>
+      <ScrollView showsVerticalScrollIndicator={false}>
+        <View style={styles.top_t}>
 
-      <View style={styles.top_t}>
-
-        <TouchableOpacity onPress={() => navigation.navigate("Home")} style={{ right: 145 }}>
-          <IconButton
-            icon="arrow-left"
-            size={30}
-            color='gray'
-          />
-        </TouchableOpacity>
-
-        <TouchableOpacity onPress={() => console.log("editar perfil")} style={{ left: 135 }}>
-          <IconButton
-            icon="account-edit-outline"
-            size={30}
-            color='gray'
-          />
-        </TouchableOpacity>
-      </View>
-
-
-      <View style={styles.top_Info}>
-
-        <View style={styles.name}>
-
-          <View style={styles.circle_User}></View>
-          <Text style={{ color: '#A98056', fontWeight: "bold", fontSize: 25 }}>Jesse Lance</Text>
+          <TouchableOpacity onPress={() => console.log("editar perfil")} style={{ left: 160 }}>
+            <IconButton
+              icon="account-edit-outline"
+              size={30}
+              color='gray'
+            />
+          </TouchableOpacity>
         </View>
 
-        <View style={styles.cellphone}>
-          <IconButton
-            icon="phone"
-            size={25}
-            color='gray'
-          />
-          <Text style={{ color: 'gray' }}>(+57) 3213526724</Text>
+
+        <View style={styles.top_Info}>
+
+          <View style={styles.name}>
+
+            <View style={styles.circle_User}></View>
+            <Text style={{ color: '#A98056', fontWeight: "bold", fontSize: 25 }}>Jesse Lance</Text>
+          </View>
+
+          <View style={styles.cellphone}>
+            <IconButton
+              icon="phone"
+              size={25}
+              color='gray'
+            />
+            <Text style={{ color: 'gray' }}>(+57) 3213526724</Text>
+          </View>
+
+          <View style={styles.email}>
+            <IconButton
+              icon="email"
+              size={25}
+              color='gray'
+            />
+            <Text style={{ color: 'gray' }}>{auth.currentUser?.email}</Text>
+          </View>
+
         </View>
 
-        <View style={styles.email}>
-          <IconButton
-            icon="email"
-            size={25}
-            color='gray'
-          />
-          <Text style={{ color: 'gray' }}>{auth.currentUser?.email}</Text>
+        <View style={styles.HorizontalLine}></View>
+
+        <View style={styles.favorites_Profile}>
+          <TouchableOpacity
+            onPress={() => navigation.navigate("Home")}
+            style={[styles.buttonOptions1]}>
+            <IconButton
+              icon="heart"
+              size={30}
+            />
+            <Text>Tus Favoritos</Text>
+          </TouchableOpacity>
         </View>
 
-      </View>
-
-      <View style={styles.HorizontalLine}></View>
-
-      <View style={styles.favorites_Profile}>
-        <TouchableOpacity
-          onPress={() => navigation.navigate("Home")}
-          style={[styles.buttonOptions1]}>
-          <IconButton
-            icon="heart"
-            size={30}
-          />
-          <Text>Tus Favoritos</Text>
-        </TouchableOpacity>
-      </View>
-
-      <View style={styles.signOut_Profile}>
-        <TouchableOpacity
-          onPress={handleSignOut}
-          style={[styles.buttonOptions2]}>
-          <IconButton
-            icon="power"
-            size={30}
-            color="#83BD75"
-          />
-          <Text style={{ color: "#83BD75" }}>Cerrar Sesión</Text>
-        </TouchableOpacity>
-      </View>
-
-
+        <View style={styles.signOut_Profile}>
+          <TouchableOpacity
+            onPress={handleSignOut}
+            style={[styles.buttonOptions2]}>
+            <IconButton
+              icon="power"
+              size={30}
+              color="#83BD75"
+            />
+            <Text style={{ color: "#83BD75" }}>Cerrar Sesión</Text>
+          </TouchableOpacity>
+        </View>
+      </ScrollView>
+      <BottomTabs navigation={navigation} />
     </SafeAreaView>
   );
 }

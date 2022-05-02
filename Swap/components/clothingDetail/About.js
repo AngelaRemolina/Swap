@@ -1,5 +1,7 @@
 import React from "react";
 import { View, Text, Image } from "react-native";
+import 'intl';
+import 'intl/locale-data/jsonp/es';
 
 export default function About(props) {
   var formatter = new Intl.NumberFormat('es-ES', {

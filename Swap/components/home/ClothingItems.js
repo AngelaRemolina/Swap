@@ -1,6 +1,8 @@
 import React from 'react';
 import { View, Text, Image, TouchableOpacity } from 'react-native';
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import 'intl';
+import 'intl/locale-data/jsonp/es';
 
 export const clothes_list = [
   {

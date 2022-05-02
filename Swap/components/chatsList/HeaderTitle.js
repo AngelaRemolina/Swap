@@ -1,5 +1,5 @@
 import React, { useState } from "react"; //7.4K (gzipped: 3K)
-import { View, Text, TouchableOpacity, SafeAreaView } from "react-native";
+import { View, Text } from "react-native";
 
 
 export default function HeaderTitle(props) {

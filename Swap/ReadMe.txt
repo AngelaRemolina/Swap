@@ -10,6 +10,7 @@ npm install react-native-paper
 npm install react-native-reanimated@2.3.1
 npm install reanimated-bottom-sheet
 npm install tslib
+npm install intl
 
 expo install firebase@8.2.3
 expo install expo-font
