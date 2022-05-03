@@ -1,6 +1,5 @@
 import { StyleSheet, View, Text, TouchableOpacity } from "react-native";
 import React, { useState } from "react";
-import ItemSummary from "./ItemSummary";
 
 export default function StartChat({ navigation, ...props }) {
   return (

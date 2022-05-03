@@ -252,12 +252,12 @@ const styles = StyleSheet.create({
         height: '100%',
     },
     optionsContainer: {
-        top: 120,
+        top: 100,
         color: '#A98056',
         alignItems: 'center',
         flexDirection: 'row',
         justifyContent: 'space-evenly',
-        width: "70%",
+        width: "90%",
         //alignItems: 'flex-start'
     },
     VerticleLine: {

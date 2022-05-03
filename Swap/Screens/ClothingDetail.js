@@ -12,6 +12,7 @@ export default function ClothingDetail({ route, navigation }) {
         name={route.params.name}
         image={route.params.image}
         price={route.params.price}
+        seller={route.params.seller}
       />
     </View>
   );

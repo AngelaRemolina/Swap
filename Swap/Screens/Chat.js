@@ -29,7 +29,7 @@ export default function Chat({ route }) {
         <Messages chatData={messages_list}/>
       </ScrollView>
       <View style={{ backgroundColor: "white", padding: 15 }}>
-        <TextInputBox />
+        <TextInputBox seller={route.params.seller}/>
       </View>
     </SafeAreaView>
   );

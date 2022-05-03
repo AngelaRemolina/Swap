@@ -14,7 +14,7 @@ export const clothes_list = [
     size: 12,
     color: "Blanco",
     description: "Grande",
-    seller: "Juan Pérez",
+    seller: "Gabriela Lara",
     lastMessage: "Me gusta, ¿cuánto es lo mínimo?"
   },
   {
@@ -28,6 +28,18 @@ export const clothes_list = [
     description: "Grande",
     seller: "Angela Remolina",
     lastMessage: "Se lo puedo pagar por Nequi?"
+  },
+  {
+    id: 3,
+    name: "Chaqueta verde",
+    img_url: "https://m.media-amazon.com/images/I/711poAL2ThL._AC_UY550_.jpg",
+    categories: ["Chaquetas"],
+    price: 300000,
+    size: 'M',
+    color: "Verde",
+    description: "Chaqueta tipo parka verde, perfecta para el frío.",
+    seller: "Luisa Monsalve",
+    lastMessage: "Sí, me interesa"
   }
 ]
 
@@ -41,6 +53,7 @@ export default function ClothingItems({ navigation, ...props }) {
       {props.clothesData.map((item, index) => (
         <TouchableOpacity key={index} activeOpacity={1} style={{ marginBottom: 30 }}
           onPress={() => navigation.navigate("ClothingDetail", {
+            id: 1,
             name: item.name,
             image: item.img_url,
             categories: item.categories,
@@ -48,6 +61,8 @@ export default function ClothingItems({ navigation, ...props }) {
             size: item.size,
             color: item.color,
             description: item.description,
+            seller: item.seller,
+            lastMessage: item.lastMessage
           })
           }>
           <View style={{ marginTop: 10, padding: 15, backgroundColor: "white" }}>

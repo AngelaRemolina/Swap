@@ -38,7 +38,7 @@ export default function Profile() {
           <View style={styles.name}>
 
             <View style={styles.circle_User}></View>
-            <Text style={{ color: '#A98056', fontWeight: "bold", fontSize: 25 }}>Jesse Lance</Text>
+            <Text style={{ color: '#A98056', fontWeight: "bold", fontSize: 25 }}>Juan Pérez</Text>
           </View>
 
           <View style={styles.cellphone}>

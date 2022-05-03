@@ -8,10 +8,16 @@ export default function ActiveChats({ navigation, ...props }) {
       {props.clothesData.map((item, index) => (
         <TouchableOpacity key={index} activeOpacity={1} style={{flexDirection: "row", marginBottom: 30 }}
           onPress={() => navigation.navigate("Chat", {
+            id: 1,
             name: item.name,
             image: item.img_url,
-            seller: item.seller,
+            categories: item.categories,
             price: item.price,
+            size: item.size,
+            color: item.color,
+            description: item.description,
+            seller: item.seller,
+            lastMessage: item.lastMessage
           })
           }>
           <View style={{flexDirection: "row", marginTop: 10, padding: 40, backgroundColor: "white" }}>
